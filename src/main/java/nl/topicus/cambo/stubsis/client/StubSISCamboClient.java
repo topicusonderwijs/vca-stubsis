@@ -55,6 +55,10 @@ public class StubSISCamboClient
 	{
 	}
 
+	/**
+	 * Maakt een Jackson ObjectMapper die overweg kan met datums als strings en de types in
+	 * java.time. VCA geeft datums terug in het formaat 'yyyy-MM-dd' en niet als een timestamp.
+	 */
 	private static ObjectMapper createMapper()
 	{
 		ObjectMapper mapper = new ObjectMapper();
@@ -69,6 +73,9 @@ public class StubSISCamboClient
 	{
 		mapper = createMapper();
 
+		// Bouw een JAX-RS client met JSON support en registreer de keystore met het PKI Overheid
+		// certificaat en private key. De client zal dit certificaat automatisch gebruiken voor
+		// client authenticatie.
 		client = ClientBuilder.newBuilder()
 			.connectTimeout(10, TimeUnit.SECONDS)
 			.keyStore(readStubSISKeyStore(), "password")
@@ -96,17 +103,23 @@ public class StubSISCamboClient
 		return "https://" + System.getProperty("cambo/hostname");
 	}
 
+	/**
+	 * Haalt een nieuw access token op als dit nodig is.
+	 */
 	public String ensureToken()
 	{
+		// Als het token nog minimaal 5 minuten geldig is, gebruik dan de oude
 		if (accessTokenExpiresAt.isAfter(Instant.now().plus(5, ChronoUnit.MINUTES)))
 			return accessToken;
 
-		Response response = null;
+		// StubSIS gebruikt een dummy-OIN met 20x9. Het gebruikte nummer moet overeenkomen het het
+		// OIN in het certificaat (serial number in het subjectDN)
 		URI uri = UriBuilder.fromUri(getCamboUrl()).path("/login/oauth2/token").build();
 		MultivaluedMap<String, String> form = new MultivaluedHashMap<>();
 		form.putSingle("client_id", "99999999999999999999");
 		form.putSingle("grant_type", "client_credentials");
 
+		Response response = null;
 		try
 		{
 			response = client.target(uri)
