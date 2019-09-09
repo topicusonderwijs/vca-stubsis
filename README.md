@@ -25,3 +25,8 @@ Dit probject bestaat uit de volgende onderdelen:
                 ├── jboss-web.xml                         (Deploy op /stubsis)
                 └── web.xml                               (Activeer Servlet API)
 ```
+
+Voor het draaien van StubSIS dienen de volgende system properties geset te worden:
+ - `stubsis/tlscertbundle` De locatie van de Java Keystore met het (dummy) PKI-overheid-certificaat (met key).
+ - `stubsis/tlscertpassword` Het wachtwoord voor de Keystore en de key.
+ - `cambo/hostname` De FQNN waar VCA draait (bijvoorbeeld `test.centraalaanmeldenmbo.nl`).
