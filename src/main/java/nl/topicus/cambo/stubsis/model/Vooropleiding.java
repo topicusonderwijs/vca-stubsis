@@ -7,12 +7,17 @@ import java.util.List;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 public class Vooropleiding extends Linkable
 {
 	private static final long serialVersionUID = 1L;
 
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDate vanaf;
 
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDate totEnMet;
 
 	@NotNull
@@ -23,6 +28,7 @@ public class Vooropleiding extends Linkable
 	@Size(max = 200)
 	private String opleiding;
 
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDate datumUitslag;
 
 	private boolean diplomaBehaald;

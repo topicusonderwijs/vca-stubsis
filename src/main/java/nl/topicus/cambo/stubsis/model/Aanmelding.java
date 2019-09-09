@@ -8,6 +8,9 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
+
 public class Aanmelding extends Linkable
 {
 	private static final long serialVersionUID = 1L;
@@ -23,6 +26,7 @@ public class Aanmelding extends Linkable
 	@Size(min = 9, max = 9)
 	private String bsn;
 
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd")
 	private LocalDate geboortedatum;
 
 	private Geslacht geslacht;
