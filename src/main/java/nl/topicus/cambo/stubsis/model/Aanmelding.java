@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -14,6 +15,10 @@ import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 public class Aanmelding extends Linkable
 {
 	private static final long serialVersionUID = 1L;
+
+	@Size(min = 13, max = 15)
+	@Pattern(regexp = "[0-9]{2}[A-Z]{2}([0-9]{2})?:[0-9]{8}")
+	private String ketenId;
 
 	@Min(value = 0)
 	private long wijzigingsvolgnummer;
@@ -53,11 +58,15 @@ public class Aanmelding extends Linkable
 	@Size(max = 100)
 	private String emailAdres;
 
-	private WettelijkVertegenwoordiger wettelijkVertegenwoordiger;
+	private List<WettelijkVertegenwoordiger> wettelijkVertegenwoordigers;
 
 	@NotNull
 	@Size(min = 4, max = 4)
 	private String instelling;
+
+	@NotNull
+	@Size(max = 36)
+	private String opleiding;
 
 	@NotNull
 	@Size(max = 100)
@@ -65,8 +74,20 @@ public class Aanmelding extends Linkable
 
 	private Leerbedrijf leerbedrijf;
 
+	private boolean aanmeldingVoorEersteLeerjaar;
+
 	public Aanmelding()
 	{
+	}
+
+	public String getKetenId()
+	{
+		return ketenId;
+	}
+
+	public void setKetenId(String ketenId)
+	{
+		this.ketenId = ketenId;
 	}
 
 	public long getWijzigingsvolgnummer()
@@ -209,15 +230,15 @@ public class Aanmelding extends Linkable
 		this.emailAdres = emailAdres;
 	}
 
-	public WettelijkVertegenwoordiger getWettelijkVertegenwoordiger()
+	public List<WettelijkVertegenwoordiger> getWettelijkVertegenwoordigers()
 	{
-		return wettelijkVertegenwoordiger;
+		return wettelijkVertegenwoordigers;
 	}
 
-	public void
-			setWettelijkeVertegenwoordiger(WettelijkVertegenwoordiger wettelijkVertegenwoordiger)
+	public void setWettelijkVertegenwoordigers(
+			List<WettelijkVertegenwoordiger> wettelijkVertegenwoordigers)
 	{
-		this.wettelijkVertegenwoordiger = wettelijkVertegenwoordiger;
+		this.wettelijkVertegenwoordigers = wettelijkVertegenwoordigers;
 	}
 
 	public String getInstelling()
@@ -228,6 +249,16 @@ public class Aanmelding extends Linkable
 	public void setInstelling(String instelling)
 	{
 		this.instelling = instelling;
+	}
+
+	public String getOpleiding()
+	{
+		return opleiding;
+	}
+
+	public void setOpleiding(String opleiding)
+	{
+		this.opleiding = opleiding;
 	}
 
 	public String getOpleidingCohort()
@@ -248,5 +279,15 @@ public class Aanmelding extends Linkable
 	public void setLeerbedrijf(Leerbedrijf leerbedrijf)
 	{
 		this.leerbedrijf = leerbedrijf;
+	}
+
+	public boolean isAanmeldingVoorEersteLeerjaar()
+	{
+		return aanmeldingVoorEersteLeerjaar;
+	}
+
+	public void setAanmeldingVoorEersteLeerjaar(boolean aanmeldingVoorEersteLeerjaar)
+	{
+		this.aanmeldingVoorEersteLeerjaar = aanmeldingVoorEersteLeerjaar;
 	}
 }
