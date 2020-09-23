@@ -1,0 +1,74 @@
+{
+  "items" : [ {
+    "$type" : "vca.Aanmelding",
+    "links" : [ {
+      "id" : 500013,
+      "rel" : "self",
+      "type" : "vca.Aanmelding",
+      "href" : "https://test.centraalaanmeldenmbo.nl/cambo/rest/v1/koppelpunt/1/aanmelding/500013"
+    } ],
+    "ketenId" : "99XX:90001119",
+    "wijzigingsvolgnummer" : 1203,
+    "type" : "I",
+    "ingetrokken" : false,
+    "datumTijdIndienen" : "2020-03-19T15:05:35.071640Z",
+    "geboortedatum" : "1980-01-01",
+    "geslacht" : "-",
+    "roepnaam" : "Test",
+    "achternaam" : "Test",
+    "voornamen" : "Test",
+    "vooropleidingen" : [ {
+      "$type" : "vca.Vooropleiding",
+      "vanaf" : "2020-03-02",
+      "totEnMet" : "2020-03-03",
+      "instelling" : "Test",
+      "opleiding" : "Havo",
+      "datumUitslag" : "2020-03-01",
+      "diplomaBehaald" : true,
+      "eindresultaat" : "7",
+      "vakken" : [ ]
+    } ],
+    "correspondentieadres" : {
+      "$type" : "vca.Adres",
+      "straat" : "test",
+      "huisnummer" : "1",
+      "postcode" : "1234AB",
+      "plaats" : "test",
+      "land" : "6030"
+    },
+    "emailAdres" : "test@test.nl",
+    "wettelijkVertegenwoordigers" : [ {
+      "$type" : "vca.WettelijkVertegenwoordiger",
+      "voornamen" : "test",
+      "achternaam" : "test",
+      "telefoonnummerMobiel" : "06123456789",
+      "emailadres" : "test@test.nl",
+      "correspondentieadres" : {
+        "$type" : "vca.Adres",
+        "straat" : "test",
+        "huisnummer" : "1",
+        "postcode" : "1234AB",
+        "plaats" : "test",
+        "land" : "6030"
+      }
+    }, {
+      "$type" : "vca.WettelijkVertegenwoordiger",
+      "voornamen" : "test",
+      "achternaam" : "test",
+      "telefoonnummerMobiel" : "06123456789",
+      "emailadres" : "test@test.nl",
+      "correspondentieadres" : {
+        "$type" : "vca.Adres",
+        "straat" : "test",
+        "huisnummer" : "1",
+        "postcode" : "1234AB",
+        "plaats" : "test",
+        "land" : "6030"
+      }
+    } ],
+    "instelling" : "99XX",
+    "opleiding" : "BAKER",
+    "opleidingCohort" : "BAKER",
+    "aanmeldingVoorEersteLeerjaar" : false
+  } ]
+}
