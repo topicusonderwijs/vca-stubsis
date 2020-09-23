@@ -7,6 +7,7 @@
       "type" : "vca.Aanmelding",
       "href" : "https://test.centraalaanmeldenmbo.nl/cambo/rest/v1/koppelpunt/1/aanmelding/500013"
     } ],
+    "caKetenId" : "123e4567-e89b-12d3-a456-426655440000",
     "ketenId" : "99XX:90001119",
     "wijzigingsvolgnummer" : 1203,
     "type" : "I",
