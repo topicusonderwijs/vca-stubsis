@@ -1,0 +1,989 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Cambo OpenAPI definition",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://test.inschrijvenmbo.nl"
+  } ],
+  "security" : [ {
+    "oauth2" : [ ]
+  } ],
+  "tags" : [ {
+    "name" : "Cambo",
+    "description" : "TODO"
+  } ],
+  "paths" : {
+    "/cambo/rest/v1/koppelpunt/{koppelpuntcode}/aanmelding/{id}" : {
+      "get" : {
+        "tags" : [ "cambo" ],
+        "operationId" : "get_koppelpunt_aanmelding",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }, {
+          "name" : "koppelpuntcode",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/vnd.topicus.cambo+json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/vca_Aanmelding"
+                },
+                "examples" : {
+                  "vca_Aanmelding" : {
+                    "$ref" : "#/components/examples/vca_Aanmelding-json"
+                  }
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/vca_Aanmelding"
+                },
+                "examples" : {
+                  "vca_Aanmelding" : {
+                    "$ref" : "#/components/examples/vca_Aanmelding-json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cambo/rest/v1/koppelpunt/{koppelpuntcode}/aanmelding" : {
+      "get" : {
+        "tags" : [ "cambo" ],
+        "operationId" : "list_koppelpunt_aanmelding",
+        "parameters" : [ {
+          "name" : "bsn",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "endpoint",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }, {
+          "name" : "ketenId",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "opleiding",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "totDatumIndienen",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }, {
+          "name" : "vanafDatumIndienen",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "string",
+            "format" : "date-time"
+          }
+        }, {
+          "name" : "vanafWijziging",
+          "in" : "query",
+          "explode" : true,
+          "schema" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }, {
+          "name" : "Range",
+          "in" : "header",
+          "schema" : {
+            "$ref" : "#/components/schemas/RequestRange"
+          }
+        }, {
+          "name" : "koppelpuntcode",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/vnd.topicus.cambo+json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/LinkableWrapper.vca_Aanmelding"
+                },
+                "examples" : {
+                  "LinkableWrapper.vca_Aanmelding" : {
+                    "$ref" : "#/components/examples/LinkableWrapper.vca_Aanmelding-json"
+                  }
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/LinkableWrapper.vca_Aanmelding"
+                },
+                "examples" : {
+                  "LinkableWrapper.vca_Aanmelding" : {
+                    "$ref" : "#/components/examples/LinkableWrapper.vca_Aanmelding-json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cambo/rest/v1/koppelpunt/{koppelpuntcode}/aanmelding/nieuw" : {
+      "get" : {
+        "tags" : [ "cambo" ],
+        "operationId" : "nieuw_koppelpunt_aanmelding_nieuw",
+        "parameters" : [ {
+          "name" : "koppelpuntcode",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "default response",
+            "content" : {
+              "application/vnd.topicus.cambo+json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/LinkableWrapper.vca_Aanmelding"
+                },
+                "examples" : {
+                  "LinkableWrapper.vca_Aanmelding" : {
+                    "$ref" : "#/components/examples/LinkableWrapper.vca_Aanmelding-json"
+                  }
+                }
+              },
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/LinkableWrapper.vca_Aanmelding"
+                },
+                "examples" : {
+                  "LinkableWrapper.vca_Aanmelding" : {
+                    "$ref" : "#/components/examples/LinkableWrapper.vca_Aanmelding-json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Link" : {
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "rel" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string"
+          },
+          "href" : {
+            "type" : "string",
+            "format" : "uri"
+          }
+        }
+      },
+      "Linkable" : {
+        "required" : [ "$type" ],
+        "type" : "object",
+        "properties" : {
+          "links" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/Link"
+            }
+          },
+          "permissions" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/auth_Permission"
+            }
+          },
+          "additionalObjects" : {
+            "type" : "object",
+            "additionalProperties" : {
+              "type" : "object"
+            }
+          },
+          "$type" : {
+            "type" : "string"
+          }
+        },
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "Linkable" : "Linkable"
+          }
+        }
+      },
+      "auth_Permission" : {
+        "type" : "object",
+        "properties" : {
+          "full" : {
+            "type" : "string"
+          },
+          "type" : {
+            "type" : "string"
+          },
+          "operations" : {
+            "uniqueItems" : true,
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "enum" : [ "CREATE", "READ", "UPDATE", "DELETE" ]
+            }
+          },
+          "instances" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "vca_Aanmelding" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.Aanmelding" : "vca_Aanmelding"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "ketenId" : {
+              "maxLength" : 15,
+              "minLength" : 13,
+              "pattern" : "[0-9]{2}[A-Z]{2}([0-9]{2})?:[0-9]{8}",
+              "type" : "string"
+            },
+            "caKetenId" : {
+              "type" : "string",
+              "format" : "uuid"
+            },
+            "wijzigingsvolgnummer" : {
+              "minimum" : 0,
+              "type" : "integer",
+              "format" : "int64"
+            },
+            "type" : {
+              "type" : "string",
+              "enum" : [ "A", "I" ]
+            },
+            "ingetrokken" : {
+              "type" : "boolean"
+            },
+            "datumTijdIndienen" : {
+              "type" : "string",
+              "format" : "date-time"
+            },
+            "bsn" : {
+              "maxLength" : 9,
+              "minLength" : 9,
+              "type" : "string"
+            },
+            "geboortedatum" : {
+              "type" : "string",
+              "format" : "date"
+            },
+            "geslacht" : {
+              "type" : "string",
+              "enum" : [ "V", "M", "-" ]
+            },
+            "roepnaam" : {
+              "maxLength" : 75,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "achternaam" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "voorvoegsels" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "voornamen" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "vooropleidingen" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/vca_Vooropleiding"
+              }
+            },
+            "correspondentieadres" : {
+              "$ref" : "#/components/schemas/vca_Adres"
+            },
+            "telefoonnummerMobiel" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "telefoonnummerVast" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "emailAdres" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "wettelijkVertegenwoordigers" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/vca_WettelijkVertegenwoordiger"
+              }
+            },
+            "instelling" : {
+              "maxLength" : 4,
+              "minLength" : 4,
+              "type" : "string"
+            },
+            "opleiding" : {
+              "maxLength" : 36,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "opleidingCohort" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "leerbedrijf" : {
+              "$ref" : "#/components/schemas/vca_Leerbedrijf"
+            },
+            "aanmeldingVoorEersteLeerjaar" : {
+              "type" : "boolean"
+            }
+          }
+        }, {
+          "required" : [ "datumTijdIndienen", "instelling", "opleiding", "opleidingCohort", "roepnaam", "type" ],
+          "type" : "object"
+        } ]
+      },
+      "vca_Adres" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.Adres" : "vca_Adres"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "straat" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "huisnummer" : {
+              "maxLength" : 10,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "huisnummerToevoeging" : {
+              "maxLength" : 10,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "huisnummerToelichting" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "postcode" : {
+              "maxLength" : 6,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "plaats" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "land" : {
+              "maxLength" : 4,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "regel1" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "regel2" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "regel3" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            }
+          }
+        }, {
+          "type" : "object"
+        } ]
+      },
+      "vca_Contactpersoon" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.Contactpersoon" : "vca_Contactpersoon"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "aanhef" : {
+              "maxLength" : 5,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "voornamen" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "voorletters" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "voorvoegsel" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "achternaam" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "telefoon" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "emailadres" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            }
+          }
+        }, {
+          "type" : "object"
+        } ]
+      },
+      "vca_Leerbedrijf" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.Leerbedrijf" : "vca_Leerbedrijf"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "naam" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "leerbedrijfId" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "adres" : {
+              "$ref" : "#/components/schemas/vca_Adres"
+            },
+            "contactpersoonErkenning" : {
+              "$ref" : "#/components/schemas/vca_Contactpersoon"
+            },
+            "tweedeContactpersoon" : {
+              "$ref" : "#/components/schemas/vca_Contactpersoon"
+            },
+            "erkenning" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            }
+          }
+        }, {
+          "required" : [ "naam" ],
+          "type" : "object"
+        } ]
+      },
+      "vca_Vak" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.Vak" : "vca_Vak"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "naam" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "resultaat" : {
+              "maxLength" : 10,
+              "minLength" : 0,
+              "type" : "string"
+            }
+          }
+        }, {
+          "required" : [ "naam", "resultaat" ],
+          "type" : "object"
+        } ]
+      },
+      "vca_Vooropleiding" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.Vooropleiding" : "vca_Vooropleiding"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "vanaf" : {
+              "type" : "string",
+              "format" : "date"
+            },
+            "totEnMet" : {
+              "type" : "string",
+              "format" : "date"
+            },
+            "instelling" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "opleiding" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "datumUitslag" : {
+              "type" : "string",
+              "format" : "date"
+            },
+            "diplomaBehaald" : {
+              "type" : "boolean"
+            },
+            "eindresultaat" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "vakken" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/components/schemas/vca_Vak"
+              }
+            }
+          }
+        }, {
+          "required" : [ "instelling", "opleiding" ],
+          "type" : "object"
+        } ]
+      },
+      "vca_WettelijkVertegenwoordiger" : {
+        "discriminator" : {
+          "propertyName" : "$type",
+          "mapping" : {
+            "vca.WettelijkVertegenwoordiger" : "vca_WettelijkVertegenwoordiger"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Linkable"
+        }, {
+          "type" : "object",
+          "properties" : {
+            "voornamen" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "voorvoegsel" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "achternaam" : {
+              "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "telefoonnummerMobiel" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "telefoonnummerVast" : {
+              "maxLength" : 20,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "emailadres" : {
+              "maxLength" : 100,
+              "minLength" : 0,
+              "type" : "string"
+            },
+            "correspondentieadres" : {
+              "$ref" : "#/components/schemas/vca_Adres"
+            }
+          }
+        }, {
+          "type" : "object"
+        } ]
+      },
+      "LinkableWrapper.vca_Aanmelding" : {
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/vca_Aanmelding"
+            }
+          }
+        }
+      },
+      "RequestRange" : {
+        "type" : "object",
+        "properties" : {
+          "start" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "end" : {
+            "type" : "integer",
+            "format" : "int64"
+          }
+        }
+      }
+    },
+    "examples" : {
+      "vca_Aanmelding-json" : {
+        "value" : {
+		"$type" : "vca.Aanmelding",
+		"links" : [ {
+		"id" : 42,
+		"rel" : "self",
+		"href" : "https://test.inschrijvenmbo.nl/cambo/rest/v1/koppelpunt/KOPPEL/aanmelding/42"
+		} ],
+		"ketenId" : "09AZ:91234567",
+		"wijzigingsvolgnummer" : 7,
+		"type" : "A",
+		"ingetrokken" : false,
+		"datumTijdIndienen" : "2019-03-20T21:43:54.123Z",
+		"bsn" : "997716460",
+		"geboortedatum" : "2001-07-15",
+		"geslacht" : "M",
+		"roepnaam" : "Joop",
+		"vooropleidingen" : [ ],
+		"telefoonnummerMobiel" : "0621436587",
+		"telefoonnummerVast" : "0386435345",
+		"emailAdres" : "joop@gmail.com",
+		"wettelijkVertegenwoordigers" : [ {
+		  "$type" : "vca.WettelijkVertegenwoordiger",
+		  "voornamen" : "Klaas",
+		  "achternaam" : "Dekkers",
+		  "telefoonnummerMobiel" : "0611223344",
+		  "telefoonnummerVast" : "0386435345",
+		  "emailadres" : "klaasdekkers@planet.nl"
+		} ],
+		"instelling" : "34CZ",
+		"opleiding" : "aaa58821-2b23-401c-a063-64a2b519bae0",
+		"opleidingCohort" : "2019A",
+		"leerbedrijf" : {
+		  "$type" : "vca.Leerbedrijf",
+		  "naam" : "Topicus B.V.",
+		  "leerbedrijfId" : "100120466",
+		  "adres" : {
+			"$type" : "vca.Adres",
+			"straat" : "Singel",
+			"huisnummer" : "25",
+			"postcode" : "7411HW",
+			"plaats" : "Deventer",
+			"land" : "6030"
+		  },
+		  "contactpersoonErkenning" : {
+			"$type" : "vca.Contactpersoon",
+			"aanhef" : "Ir.",
+			"voornamen" : "Emond",
+			"voorletters" : "E",
+			"achternaam" : "Papegaaij",
+			"telefoon" : "0622222222",
+			"emailadres" : "test@top.nl"
+		  },
+		"erkenning" : "304"
+		},
+		"aanmeldingVoorEersteLeerjaar" : false
+		}
+      },
+      "LinkableWrapper.vca_Aanmelding-json" : {
+        "value" : {
+		  "items" : [ {
+			"$type" : "vca.Aanmelding",
+			"links" : [ {
+			  "id" : 42,
+			  "rel" : "self",
+			  "href" : "https://test.inschrijvenmbo.nl/cambo/rest/v1/koppelpunt/KOPPEL/aanmelding/42"
+			} ],
+			"ketenId" : "09AZ:91234567",
+			"wijzigingsvolgnummer" : 7,
+			"type" : "A",
+			"ingetrokken" : false,
+			"datumTijdIndienen" : "2019-03-20T21:43:54.123Z",
+			"bsn" : "997716460",
+			"geboortedatum" : "2001-07-15",
+			"geslacht" : "M",
+			"roepnaam" : "Joop",
+			"vooropleidingen" : [ ],
+			"telefoonnummerMobiel" : "0621436587",
+			"telefoonnummerVast" : "0386435345",
+			"emailAdres" : "joop@gmail.com",
+			"wettelijkVertegenwoordigers" : [ {
+			  "$type" : "vca.WettelijkVertegenwoordiger",
+			  "voornamen" : "Klaas",
+			  "achternaam" : "Dekkers",
+			  "telefoonnummerMobiel" : "0611223344",
+			  "telefoonnummerVast" : "0386435345",
+			  "emailadres" : "klaasdekkers@planet.nl"
+			} ],
+			"instelling" : "34CZ",
+			"opleiding" : "aaa58821-2b23-401c-a063-64a2b519bae0",
+			"opleidingCohort" : "2019A",
+			"leerbedrijf" : {
+			  "$type" : "vca.Leerbedrijf",
+			  "naam" : "Topicus B.V.",
+			  "leerbedrijfId" : "100120466",
+			  "adres" : {
+				"$type" : "vca.Adres",
+				"straat" : "Singel",
+				"huisnummer" : "25",
+				"postcode" : "7411HW",
+				"plaats" : "Deventer",
+				"land" : "6030"
+			  },
+			  "contactpersoonErkenning" : {
+				"$type" : "vca.Contactpersoon",
+				"aanhef" : "Ir.",
+				"voornamen" : "Emond",
+				"voorletters" : "E",
+				"achternaam" : "Papegaaij",
+				"telefoon" : "0622222222",
+				"emailadres" : "test@top.nl"
+			  },
+			  "erkenning" : "304"
+			},
+			"aanmeldingVoorEersteLeerjaar" : false
+		  }, {
+			"$type" : "vca.Aanmelding",
+			"links" : [ {
+			  "id" : 43,
+			  "rel" : "self",
+			  "href" : "https://test.inschrijvenmbo.nl/cambo/rest/v1/koppelpunt/KOPPEL/aanmelding/43"
+			} ],
+			"ketenId" : "09AZ:97654321",
+			"wijzigingsvolgnummer" : 8,
+			"type" : "I",
+			"ingetrokken" : false,
+			"datumTijdIndienen" : "2019-03-23T09:42:16.643Z",
+			"geboortedatum" : "2002-11-21",
+			"geslacht" : "V",
+			"roepnaam" : "Anne",
+			"achternaam" : "Janssen",
+			"voorvoegsels" : "van",
+			"voornamen" : "Anne Maria",
+			"vooropleidingen" : [ {
+			  "$type" : "vca.Vooropleiding",
+			  "vanaf" : "2014-09-01",
+			  "totEnMet" : "2018-08-31",
+			  "instelling" : "Het Lyceum",
+			  "opleiding" : "VMBO-KL",
+			  "datumUitslag" : "2018-06-25",
+			  "diplomaBehaald" : true,
+			  "eindresultaat" : "Geslaagd",
+			  "vakken" : [ {
+				"$type" : "vca.Vak",
+				"naam" : "Nederlands",
+				"resultaat" : "7"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Engels",
+				"resultaat" : "6"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Maatschappijleer",
+				"resultaat" : "7"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Lichamelijke opvoeding",
+				"resultaat" : "goed"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Kunstvak",
+				"resultaat" : "voldoende"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Bouwen, wonen en interieur",
+				"resultaat" : "9,1"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Algemeen vormend vak",
+				"resultaat" : "8"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Ondernemen",
+				"resultaat" : "8,1"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Meubelmaken",
+				"resultaat" : "7,8"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Robotica",
+				"resultaat" : "7,5"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Interieurontwerp en -design",
+				"resultaat" : "8,5"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Schoonmetselwerk",
+				"resultaat" : "6"
+			  }, {
+				"$type" : "vca.Vak",
+				"naam" : "Schilderen en afwerken van hout en steenachtige ondergronden",
+				"resultaat" : "7"
+			  } ]
+			} ],
+			"correspondentieadres" : {
+			  "$type" : "vca.Adres",
+			  "straat" : "Obrechtstraat",
+			  "huisnummer" : "35",
+			  "huisnummerToevoeging" : "b",
+			  "postcode" : "3766BH",
+			  "plaats" : "Soest",
+			  "land" : "6030"
+			},
+			"telefoonnummerMobiel" : "0678563412",
+			"emailAdres" : "annevanjanssen@hotmail.com",
+			"wettelijkVertegenwoordigers" : [ {
+			  "$type" : "vca.WettelijkVertegenwoordiger",
+			  "voornamen" : "Piet",
+			  "voorvoegsel" : "van",
+			  "achternaam" : "Janssen",
+			  "telefoonnummerMobiel" : "0655667788",
+			  "correspondentieadres" : {
+				"$type" : "vca.Adres",
+				"straat" : "Gruttostraat",
+				"huisnummer" : "70",
+				"postcode" : "8446HH",
+				"plaats" : "Heerenveen",
+				"land" : "6030"
+			  }
+			}, {
+			  "$type" : "vca.WettelijkVertegenwoordiger",
+			  "voornamen" : "Anoek",
+			  "voorvoegsel" : "de",
+			  "achternaam" : "Vries",
+			  "emailadres" : "anoek.de.vries@outlook.com",
+			  "correspondentieadres" : {
+				"$type" : "vca.Adres",
+				"land" : "5077",
+				"regel1" : "MVRG+5X Mala'e",
+				"regel2" : "Wallis and Futuna"
+			  }
+			} ],
+			"instelling" : "81HQ",
+			"opleiding" : "d09ea1b2-1677-4c04-bf17-143eda00dba2",
+			"opleidingCohort" : "COHORT-19",
+			"aanmeldingVoorEersteLeerjaar" : true
+		  } ]
+		}
+      }
+    },
+    "securitySchemes" : {
+      "oauth2" : {
+        "type" : "oauth2",
+        "flows" : {
+          "clientCredentials" : {
+            "tokenUrl" : "https://test.inschrijvenmbo.nl/login/oauth2/token",
+            "refreshUrl" : "https://test.inschrijvenmbo.nl/login/oauth2/token"
+          }
+        }
+      }
+    }
+  }
+}
