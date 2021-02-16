@@ -741,6 +741,7 @@
 		"href" : "https://test.inschrijvenmbo.nl/cambo/rest/v1/koppelpunt/KOPPEL/aanmelding/42"
 		} ],
 		"ketenId" : "09AZ:91234567",
+		"caKetenId" : "123e4567-e89b-12d3-a456-426655440000",
 		"wijzigingsvolgnummer" : 7,
 		"type" : "A",
 		"ingetrokken" : false,
@@ -749,6 +750,7 @@
 		"geboortedatum" : "2001-07-15",
 		"geslacht" : "M",
 		"roepnaam" : "Joop",
+		"achternaam" : "Dekkers",
 		"vooropleidingen" : [ ],
 		"telefoonnummerMobiel" : "0621436587",
 		"telefoonnummerVast" : "0386435345",
@@ -800,6 +802,7 @@
 			  "href" : "https://test.inschrijvenmbo.nl/cambo/rest/v1/koppelpunt/KOPPEL/aanmelding/42"
 			} ],
 			"ketenId" : "09AZ:91234567",
+			"caKetenId" : "123e4567-e89b-12d3-a456-426655440000",
 			"wijzigingsvolgnummer" : 7,
 			"type" : "A",
 			"ingetrokken" : false,
@@ -808,6 +811,7 @@
 			"geboortedatum" : "2001-07-15",
 			"geslacht" : "M",
 			"roepnaam" : "Joop",
+			"achternaam" : "Dekkers",
 			"vooropleidingen" : [ ],
 			"telefoonnummerMobiel" : "0621436587",
 			"telefoonnummerVast" : "0386435345",
@@ -855,6 +859,7 @@
 			  "href" : "https://test.inschrijvenmbo.nl/cambo/rest/v1/koppelpunt/KOPPEL/aanmelding/43"
 			} ],
 			"ketenId" : "09AZ:97654321",
+			"caKetenId" : "123e4567-e89b-12d3-a456-426655440000",
 			"wijzigingsvolgnummer" : 8,
 			"type" : "I",
 			"ingetrokken" : false,
