@@ -1,0 +1,45 @@
+{
+  "items" : [ {
+    "$type" : "Aanmelding",
+    "links" : [ {
+      "id" : 500013,
+      "rel" : "self",
+      "type" : "Aanmelding",
+      "href" : "https://mtls-test.inschrijvenmbo.nl/cambo/rest/v1/overstapsysteem/aanmelding/500013"
+    } ],
+	"ketenId" : "99XX:90001119",
+    "caKetenId" : "123e4567-e89b-12d3-a456-426655440000",
+    "wijzigingsvolgnummer" : 1203,
+    "pgn" : "900180730",
+    "status" : "AO",
+    "laatsteWijziging" : "2022-03-19T15:05:35.071640Z",
+	"brin" : "99XX",
+    "onderwijsAanbiederCode" : "101A620",
+    "opleidingCreboCode" : "25647",
+	"opleidingAanmeldjaar" : "2022-2023",
+    "startdatumOpleiding" : "2022-12-20",
+    "leeratraject" : "BBL",
+    },
+	{
+    "$type" : "Aanmelding",
+    "links" : [ {
+      "id" : 500015,
+      "rel" : "self",
+      "type" : "Aanmelding",
+      "href" : "https://mtls-test.inschrijvenmbo.nl/cambo/rest/v1/overstapsysteem/aanmelding/500015"
+    } ],
+	"ketenId" : "99XX:90001126",
+    "caKetenId" : "123e4567-e89b-12d3-a456-426655440000",
+    "wijzigingsvolgnummer" : 1206,
+    "pgn" : "900180730",
+    "status" : "LI",
+    "laatsteWijziging" : "2022-03-19T16:05:35.071640Z",
+	"brin" : "91XX",
+    "onderwijsAanbiederCode" : "101A620",
+    "opleidingCreboCode" : "25646",
+	"opleidingAanmeldjaar" : "2022-2023",
+    "startdatumOpleiding" : "2022-12-20",
+    "leeratraject" : "BBL",
+    }
+	]
+}
