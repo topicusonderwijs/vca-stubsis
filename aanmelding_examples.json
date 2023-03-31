@@ -406,6 +406,14 @@
             },
             "aanmeldingVoorEersteLeerjaar" : {
               "type" : "boolean"
+            },
+			"extraOndersteuning" : {
+              "type" : "boolean"
+            },
+			"extraInformatie" : {
+			  "maxLength" : 200,
+              "minLength" : 0,
+              "type" : "string"	
             }
           }
         }, {
@@ -789,7 +797,9 @@
 		  },
 		"erkenning" : "304"
 		},
-		"aanmeldingVoorEersteLeerjaar" : false
+		"aanmeldingVoorEersteLeerjaar" : false,
+		"extraOndersteuning" : false,
+		"extraInformatie" : "Testvulling van het veld extraInformatie waar een aanmelder potentieel 200 karakters in kwijt kan."
 		}
       },
       "LinkableWrapper.vca_Aanmelding-json" : {
@@ -850,7 +860,9 @@
 			  },
 			  "erkenning" : "304"
 			},
-			"aanmeldingVoorEersteLeerjaar" : false
+			"aanmeldingVoorEersteLeerjaar" : false,
+			"extraOndersteuning" : true,
+			"extraInformatie" : "Testvulling van het veld extraInformatie waar een aanmelder potentieel 200 karakters in kwijt kan."
 		  }, {
 			"$type" : "vca.Aanmelding",
 			"links" : [ {
@@ -974,7 +986,9 @@
 			"instelling" : "81HQ",
 			"opleiding" : "d09ea1b2-1677-4c04-bf17-143eda00dba2",
 			"opleidingCohort" : "COHORT-19",
-			"aanmeldingVoorEersteLeerjaar" : true
+			"aanmeldingVoorEersteLeerjaar" : true,
+			"extraOndersteuning" : false,
+			"extraInformatie" : ""	
 		  } ]
 		}
       }

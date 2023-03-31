@@ -70,6 +70,8 @@
     "instelling" : "99XX",
     "opleiding" : "BAKER",
     "opleidingCohort" : "BAKER",
-    "aanmeldingVoorEersteLeerjaar" : false
+    "aanmeldingVoorEersteLeerjaar" : false,
+	"extraOndersteuning" : false,
+	"extraInformatie" : "Testvulling van het veld extraInformatie waar een aanmelder potentieel 200 karakters in kwijt kan."
   } ]
 }
