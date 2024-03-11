@@ -774,6 +774,7 @@
 		"instelling" : "34CZ",
 		"opleiding" : "aaa58821-2b23-401c-a063-64a2b519bae0",
 		"opleidingCohort" : "2019A",
+		"gewensteStartdatumCohort" : "15-10-2024",
 		"leerbedrijf" : {
 		  "$type" : "vca.Leerbedrijf",
 		  "naam" : "Topicus B.V.",
@@ -798,8 +799,7 @@
 		"erkenning" : "304"
 		},
 		"aanmeldingVoorEersteLeerjaar" : false,
-		"extraOndersteuning" : false,
-		"extraInformatie" : "Testvulling van het veld extraInformatie waar een aanmelder potentieel 200 karakters in kwijt kan."
+		"extraOndersteuning" : false
 		}
       },
       "LinkableWrapper.vca_Aanmelding-json" : {
@@ -822,6 +822,9 @@
 			"geslacht" : "M",
 			"roepnaam" : "Joop",
 			"achternaam" : "Dekkers",
+			"voorkeursAchternaam" : "",
+			"voorvoegsels" : "van",
+			"voorkeursVoorvoegsels" : "",
 			"vooropleidingen" : [ ],
 			"telefoonnummerMobiel" : "0621436587",
 			"telefoonnummerVast" : "0386435345",
@@ -837,6 +840,7 @@
 			"instelling" : "34CZ",
 			"opleiding" : "aaa58821-2b23-401c-a063-64a2b519bae0",
 			"opleidingCohort" : "2019A",
+			"gewensteStartdatumCohort" : "15-10-2024",
 			"leerbedrijf" : {
 			  "$type" : "vca.Leerbedrijf",
 			  "naam" : "Topicus B.V.",
@@ -861,8 +865,7 @@
 			  "erkenning" : "304"
 			},
 			"aanmeldingVoorEersteLeerjaar" : false,
-			"extraOndersteuning" : true,
-			"extraInformatie" : "Testvulling van het veld extraInformatie waar een aanmelder potentieel 200 karakters in kwijt kan."
+			"extraOndersteuning" : true
 		  }, {
 			"$type" : "vca.Aanmelding",
 			"links" : [ {
@@ -880,7 +883,9 @@
 			"geslacht" : "V",
 			"roepnaam" : "Anne",
 			"achternaam" : "Janssen",
-			"voorvoegsels" : "van",
+			"voorkeursAchternaam" : "Janssen-Haver",
+			"voorvoegsels" : "van der",
+			"voorkeursVoorvoegsels" : "v/d",
 			"voornamen" : "Anne Maria",
 			"vooropleidingen" : [ {
 			  "$type" : "vca.Vooropleiding",
@@ -986,9 +991,9 @@
 			"instelling" : "81HQ",
 			"opleiding" : "d09ea1b2-1677-4c04-bf17-143eda00dba2",
 			"opleidingCohort" : "COHORT-19",
+			"gewensteStartdatumCohort" : "15-10-2024",
 			"aanmeldingVoorEersteLeerjaar" : true,
-			"extraOndersteuning" : false,
-			"extraInformatie" : ""	
+			"extraOndersteuning" : false
 		  } ]
 		}
       }
