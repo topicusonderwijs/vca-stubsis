@@ -17,6 +17,9 @@
     "geslacht" : "-",
     "roepnaam" : "Test",
     "achternaam" : "Test",
+    "voorkeursAchternaam" : "Test_gewenst",
+    "voorvoegsels" : "van de",
+    "voorkeursVoorvoegsels" : "v/d",
     "voornamen" : "Test",
     "vooropleidingen" : [ {
       "$type" : "vca.Vooropleiding",
@@ -69,9 +72,9 @@
     } ],
     "instelling" : "99XX",
     "opleiding" : "BAKER",
-    "opleidingCohort" : "BAKER",
+    "opleidingCohort" : "BAKER_CODE",
+    "gewensteStartdatumCohort" : "15-10-2024",
     "aanmeldingVoorEersteLeerjaar" : false,
-    "extraOndersteuning" : false,
-    "extraInformatie" : "Testvulling van het veld extraInformatie waar een aanmelder potentieel 200 karakters in kwijt kan."
+    "extraOndersteuning" : false
   } ]
 }
