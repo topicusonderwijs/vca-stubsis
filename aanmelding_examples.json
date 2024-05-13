@@ -774,7 +774,7 @@
 		"instelling" : "34CZ",
 		"opleiding" : "aaa58821-2b23-401c-a063-64a2b519bae0",
 		"opleidingCohort" : "2019A",
-		"gewensteStartdatumCohort" : "15-10-2024",
+		"gewensteStartdatum" : "15-10-2024",
 		"leerbedrijf" : {
 		  "$type" : "vca.Leerbedrijf",
 		  "naam" : "Topicus B.V.",
@@ -840,7 +840,7 @@
 			"instelling" : "34CZ",
 			"opleiding" : "aaa58821-2b23-401c-a063-64a2b519bae0",
 			"opleidingCohort" : "2019A",
-			"gewensteStartdatumCohort" : "15-10-2024",
+			"gewensteStartdatum" : "15-10-2024",
 			"leerbedrijf" : {
 			  "$type" : "vca.Leerbedrijf",
 			  "naam" : "Topicus B.V.",
@@ -991,7 +991,7 @@
 			"instelling" : "81HQ",
 			"opleiding" : "d09ea1b2-1677-4c04-bf17-143eda00dba2",
 			"opleidingCohort" : "COHORT-19",
-			"gewensteStartdatumCohort" : "15-10-2024",
+			"gewensteStartdatum" : "15-10-2024",
 			"aanmeldingVoorEersteLeerjaar" : true,
 			"extraOndersteuning" : false
 		  } ]
