@@ -73,7 +73,7 @@
     "instelling" : "99XX",
     "opleiding" : "BAKER",
     "opleidingCohort" : "BAKER_CODE",
-    "gewensteStartdatumCohort" : "15-10-2024",
+    "gewensteStartdatum" : "15-10-2024",
     "aanmeldingVoorEersteLeerjaar" : false,
     "extraOndersteuning" : false
   } ]
